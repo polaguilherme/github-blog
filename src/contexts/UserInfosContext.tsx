@@ -68,15 +68,10 @@ export function UserInfoProvider({ children }: UserInfoProviderProps) {
   }, []);
 
   const fetchIssueByNumber = useCallback(async (id: number) => {
-    try {
-      const response = await api.get(
-        `/repos/polaguilherme/github-blog/issues/${id}`
-      );
-      return response.data;
-    } catch (error) {
-      console.error(`Error fetching issue ${id}:`, error);
-      return null;
-    }
+    const response = await api.get(
+      `/repos/polaguilherme/github-blog/issues/${id}`
+    );
+    return response.data;
   }, []);
 
   useEffect(() => {
