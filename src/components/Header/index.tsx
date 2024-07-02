@@ -2,8 +2,8 @@ import headerCoverBg from "../../assets/Cover.png";
 
 export function Header() {
   return (
-    <header className="relative">
-      <img src={headerCoverBg} alt="headerCoverBg" className="w-full" />
+    <header className="w-full">
+      <img src={headerCoverBg} alt="Header Background" className="w-full" />
     </header>
   );
 }

@@ -1,19 +1,19 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../components/Header";
 import { ReactNode } from "react";
+import { Header } from "../components/Header";
 
 interface DefaultLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
     <>
       <Header />
-      <div className="px-72 font-font-nunito">
+      <main className="flex flex-col items-center px-72 font-font-nunito">
         <Outlet />
         {children}
-      </div>
+      </main>
     </>
   );
 }
